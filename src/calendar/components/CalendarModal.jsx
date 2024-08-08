@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import Modal from 'react-modal'
 import Swal from 'sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
-import { useUiStore } from '../../hooks/useUiStore'
+import { useUiStore } from '../../hooks'
 
 registerLocale('es', es)
 const customStyles = {
