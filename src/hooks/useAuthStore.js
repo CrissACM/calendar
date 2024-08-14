@@ -24,6 +24,11 @@ export function useAuthStore() {
 		}
 	}
 
+	const startLogout = () => {
+		localStorage.clear()
+		dispatch(onLogout())
+	}
+
 	const startRegister = async ({ name, email, password }) => {
 		dispatch(onChecking())
 
@@ -69,6 +74,7 @@ export function useAuthStore() {
 		user,
 		errorMessage,
 		startLogin,
+		startLogout,
 		startRegister,
 		checkAuthToken,
 	}
