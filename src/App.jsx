@@ -1,9 +1,11 @@
-import { AppRouter } from './router'
+import PWABadge from "./PWABadge";
+import { AppRouter } from "./router";
 
-export function App () {
+export function App() {
   return (
     <>
       <AppRouter />
+      <PWABadge />
     </>
-  )
+  );
 }
