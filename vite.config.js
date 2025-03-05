@@ -41,6 +41,19 @@ export default defineConfig({
               },
             },
           },
+          {
+            handler: "NetworkOnly",
+            urlPattern: /^http:\/\/localhost:4000\/.*/i,
+            method: "POST",
+            options: {
+              backgroundSync: {
+                name: "queueName2",
+                options: {
+                  maxRetentionTime: 24 * 60, // Retry for max of 24 Hours
+                },
+              },
+            },
+          },
         ],
       },
 
